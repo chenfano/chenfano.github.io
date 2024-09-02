@@ -51,7 +51,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-06-21 20:30:27'
+  postUpdate: '2024-09-02 21:07:04'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -148,181 +148,138 @@
         }
       }
       detectApple()
-    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 导航</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://img2.imgtp.com/2024/03/28/Pqx8YE5f.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="回忆是实体的最高形式"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 导航</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">回忆是实体的最高形式</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/21/elasticsearch/" title="elasticsearch">elasticsearch</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-21T11:39:05.000Z" title="发表于 2024-06-21 19:39:05">2024-06-21</time></span></div><div class="content">elasticsearch
-一个开源的分布式搜索引擎，可以用来实现搜索、日志统计、分析、系统监控等功能
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">57</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 导航</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://img2.imgtp.com/2024/03/28/Pqx8YE5f.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="回忆是实体的最高形式"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 导航</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">回忆是实体的最高形式</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/02/websocket%E5%92%8Cspringtask/" title="websocket和springtask">websocket和springtask</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-02T13:06:13.000Z" title="发表于 2024-09-02 21:06:13">2024-09-02</time></span></div><div class="content">springtask编写定时任务类：
+进入sky-server模块中
+1234567891011121314151617181920212223package com.sky.task;import lombok.extern.slf4j.Slf4j;import org.springframework.scheduling.annotation.Scheduled;import org.springframework.stereotype.Component;import java.util.Date;/** * 自定义定时任务类 */@Component@Slf4jpublic class MyTask &#123;    /**     * 定时任务 每隔5秒触发一次     */    @Scheduled(cron = &quot;0/5 * * * * ?&quot;)    public void executeTask()&#123;        log.info(&quot;定时任务开始执行：&#123;&#125;&quot;,new Date());    &# ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/02/redis%E7%9A%84%E7%BC%93%E5%AD%98/" title="redis的缓存">redis的缓存</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-02T13:05:26.000Z" title="发表于 2024-09-02 21:05:26">2024-09-02</time></span></div><div class="content">redis的使用（string）
 
-正向索引
-1）用户搜索数据，条件是title符合&quot;%手机%&quot;
-2）逐行获取数据，比如id为1的数据
-3）判断数据中的title是否符合用户搜索条件
-4）如果符合则放入结果集，不符合则丢弃。回到步骤1
-倒排索引创建倒排索引是对正向索引的一种特殊处理，流程如下：
-
-将每一个文档的数据利用算法分词，得到一个个词条
-创建表，每行数据包括词条、词条所在文档id、位置等信息
-因为词条唯一性，可以给词条创建索引，例如hash表结构索引
-
-如图：
-
-1）用户输入条件&quot;华为手机&quot;进行搜索。
-2）对用户输入内容分词，得到词条：华为、手机。
-3）拿着词条在倒排索引中查找，可以得到包含词条的文档id：1、2、3。
-4）拿着文档id到正向索引中查找具体文档。
-
-
-
-
-MySQL
-Elasticsearch
-说明
-
-
-
-Table
-Index
-索引(index)，就是文档的集合，类似数据库的表(table)
-
-
-Row
-Document
-文档（Document），就是一 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/18/Docker2/" title="Docker2">Docker2</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-18T11:04:50.000Z" title="发表于 2024-06-18 19:04:50">2024-06-18</time></span></div><div class="content">数据卷数据卷（volume）是一个虚拟目录，指向宿主机文件系统中的某个目录。
-
-一旦完成数据卷挂载，对容器的一切操作都会作用在数据卷对应的宿主机目录了。
-这样，我们操作宿主机的&#x2F;var&#x2F;lib&#x2F;docker&#x2F;volumes&#x2F;html目录，就等于操作容器内的&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html目录了
-数据卷的作用：
-
-将容器与数据分离，解耦合，方便操作容器内数据，保证数据安全
-
-数据卷操作：
-
-docker volume create：创建数据卷
-docker volume ls：查看所有数据卷
-docker volume inspect：查看数据卷详细信息，包括关联的宿主机目录位置
-docker volume rm：删除指定数据卷
-docker volume prune：删除所有未使用的数据卷
-
-挂载数据卷
-12345docker run \  --name mn \  -v html:/root/html \  -p 8080:80  nginx \
-
-范例：nginx挂载
-① 创建容器并 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/17/Docker/" title="Docker">Docker</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-17T11:18:51.000Z" title="发表于 2024-06-17 19:18:51">2024-06-17</time></span></div><div class="content">Docker
-解决依赖关系复杂，出现的兼容性问题
-将应用的Libs（函数库）、Deps（依赖）、配置与应用一起打包
-将每个应用放到一个隔离容器去运行，避免互相干扰
-
-
-开发、测试、生产环境有差异
-Docker将用户程序与所需要调用的系统(比如Ubuntu)函数库一起打包
-Docker运行到不同操作系统时，直接基于打包的函数库，借助于操作系统的Linux内核来运行
-
-
-
-Docker与虚拟机虚拟机（virtual machine）是在操作系统中模拟硬件设备，然后运行另一个操作系统，比如在 Windows 系统里面运行 Ubuntu 系统，这样就可以运行任意的Ubuntu应用了。
-Docker仅仅是封装函数库，并没有模拟完整的操作系统，如图：
-
-
-Docker和虚拟机的差异：
-
-docker是一个系统进程；虚拟机是在操作系统中的操作系统
-
-docker体积小、启动速度快、性能好；虚拟机体积大、启动速度慢、性能一般
-
-
-镜像：
-
-将应用程序及其依赖、环境、配置打包在一起
-
-容器：
-
-镜像运行起来就是容器，一个镜像可以运行多个容器
-
-Docker结构：
-
-服务端：接收命令或远程请求，操作镜像或 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/14/Springcloud/" title="Springcloud">Springcloud</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-14T10:55:43.000Z" title="发表于 2024-06-14 18:55:43">2024-06-14</time></span></div><div class="content">单体架构：将业务的所有功能集中在一个项目中开发，打成一个包部署。
-
-单体架构的优缺点如下：
-优点：
-
-架构简单
-部署成本低
-
-缺点：
-
-耦合度高（维护困难、升级困难）
-
-分布式架构：根据业务功能对系统做拆分，每个业务功能模块作为独立项目开发，称为一个服务。
-
-分布式架构的优缺点：
-优点：
-
-降低服务耦合
-有利于服务升级和拓展
-
-缺点：
-
-服务调用关系错综复杂
-
-总结：
-
-单体架构：简单方便，高度耦合，扩展性差，适合小型项目。例如：学生管理系统
-
-分布式架构：松耦合，扩展性好，但架构复杂，难度大。适合大型互联网项目，例如：京东、淘宝
-
-微服务：一种良好的分布式架构方案
-①优点：拆分粒度更小、服务更独立、耦合度更低
-②缺点：架构非常复杂，运维、监控、部署难度提高
-
-SpringCloud是微服务架构的一站式解决方案，集成了各种优秀微服务功能组件
-
-
-步骤：
-
-注册一个RestTemplate的实例到Spring容器
-
-
-修改order-service服务中的OrderService类中的queryOrderById方法，根据Order对象中的userId查询User
-
-
-将查询的User填 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/13/%E7%BB%8F%E9%AA%8C%E6%9D%82%E8%B0%88/" title="经验杂谈">经验杂谈</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-13T08:08:58.000Z" title="发表于 2024-06-13 16:08:58">2024-06-13</time></span></div><div class="content">String、StringBuffer、StringBuilder、StringJoiner区别是什么？Sting是不可变的，所以每次进行改变都是创建一个新的Sting对象
-StringBuffer是一个可变的字符串序列，当进行字符串的频繁修改，StringBuffer比String更高效，并且他的线程是安全的
-StringBuilder与StringBuffer类似，用于单个线程中创建字符串，但他的线程不是安全的，但有更好的性能，适合于单线程环境中，有方法名（append、insert、delete、replace）
-StringJoiner是从Java8开始引入，可以将多个字符串按照指定的分割符链接起来
-12345StringJoiner sj = new StringJoiner(&quot;, &quot;, &quot;[&quot;, &quot;]&quot;);sj.add(&quot;apple&quot;);sj.add(&quot;banana&quot;);sj.add(&quot;cherry&quot;);System.out.println(sj.toSt ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/11/Mybatis-plus/" title="MybatisPlus">MybatisPlus</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-11T01:13:01.000Z" title="发表于 2024-06-11 09:13:01">2024-06-11</time></span></div><div class="content">MyBatis-Plusmaven坐标：
-12345&lt;dependency&gt;    &lt;groupId&gt;com.baomidou&lt;/groupId&gt;    &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;    &lt;version&gt;3.4.3&lt;/version&gt;&lt;/dependency
-
-这个是基于BaseMapper接口的
-Mapper层
-12345678910package com.itheima.mapper;import com.baomidou.mybatisplus.core.mapper.BaseMapper;import com.itheima.domain.User;import org.apache.ibatis.annotations.Mapper;import java.util.List;@Mapperpublic interface UserMapper extends BaseMapper&lt;User&gt; &#1 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/05/WebSocket/" title="WebSocket">WebSocket</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-05T02:53:02.000Z" title="发表于 2024-06-05 10:53:02">2024-06-05</time></span></div><div class="content">WebSocket 是基于 TCP 的一种新的网络协议。它实现了浏览器与服务器全双工通信——浏览器和服务器只需要完成一次握手，两者之间就可以创建持久性的连接， 并进行双向数据传输。
-maven坐标
-1234&lt;dependency&gt;	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;	&lt;artifactId&gt;spring-boot-starter-websocket&lt;/artifactId&gt;&lt;/dependency&gt;
-
-代码实现
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849//存放会话对象    private static Map&lt;String, Session&gt; sessionMap = new HashMap();    /**     * 连接建立成功调用的方法     */    @OnOpen    public void o ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/05/SpringTask/" title="SpringTask">SpringTask</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-05T02:33:43.000Z" title="发表于 2024-06-05 10:33:43">2024-06-05</time></span></div><div class="content">Spring Task 是Spring框架提供的任务调度工具，可以按照约定的时间自动执行某个代码逻辑。
-定位：定时任务框架
-作用：定时自动执行某段Java代码
-应用场景：还款提醒、纪念日发送祝福
-Cron表达式：
-举例：
-2022年10月12日上午9点整 对应的cron表达式为：0 0 9 12 10 ? 2022
-
-
-cron表达式在线生成器：https://cron.qqe2.com/
-通配符：
-* 表示所有值； 
-? 表示未说明的值，即不关心它为何值； 
-- 表示一个指定的范围； 
-, 表示附加一个可能值； 
-&#x2F; 符号前表示开始时间，符号后表示每次递增的值；
-使用步骤
-1). 导入maven坐标 spring-context（已存在）
+controller层123456789101112131415161718192021222324252627282930313233@Autowired   private RedisTemplate redisTemplate;/**    * 根据分类id查询菜品    *    * @param categoryId    * @return    */   @GetMapping(&quot;/list&quot;)   @ApiOperation(&quot;根据分类id查询菜品&quot;)   public Result&lt;List&lt;DishVO&gt;&gt; list(Long categoryId) &#123;       //构造redis中的key，规则：dish_分类id       String key = &quot;dish_&quot; + categoryId;       //查询redis中是否存在菜品数据       List&lt;DishVO&gt; list = (List&lt;Dis ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/02/httpclient%E7%9A%84%E4%BD%BF%E7%94%A8/" title="httpclient的使用">httpclient的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-02T13:04:37.000Z" title="发表于 2024-09-02 21:04:37">2024-09-02</time></span></div><div class="content">功能实现：微信登录、商品浏览
+微信登录效果图：
  
 
-2). 启动类添加注解 @EnableScheduling 开启任务调度
-3). 自定义定时任务类
-1234567/**     * 定时任务 每隔5秒触发一次     */    @Scheduled(cron = &quot;0/5 * * * * ?&quot;)    public void executeTask()&#1 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/05/POI/" title="POI">POI</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-05T01:55:29.000Z" title="发表于 2024-06-05 09:55:29">2024-06-05</time></span></div><div class="content">Apache POI 是一个处理Miscrosoft Office各种文件格式的开源项目。简单来说就是，我们可以使用 POI 在 Java 程序中对Miscrosoft Office各种文件进行读写操作。一般情况下，POI 都是用于操作 Excel 文件。
 
-MAVEN坐标12345678910&lt;dependency&gt;    &lt;groupId&gt;org.apache.poi&lt;/groupId&gt;    &lt;artifactId&gt;poi&lt;/artifactId&gt;    &lt;version&gt;3.16&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt;    &lt;groupId&gt;org.apache.poi&lt;/groupId&gt;    &lt;artifactId&gt;poi-ooxml&lt;/artifactId&gt;    &lt;version&gt;3.16&lt;/version&gt;&lt;/dependency&gt;
 
-代码分析## ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/05/27/HTTPClient/" title="HTTPClient">HTTPClient</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-27T09:01:25.000Z" title="发表于 2024-05-27 17:01:25">2024-05-27</time></span></div><div class="content">依赖12345&lt;dependency&gt;	&lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;	&lt;artifactId&gt;httpclient&lt;/artifactId&gt;	&lt;version&gt;4.5.13&lt;/version&gt;&lt;/dependency&gt;
+商品浏览效果图：
+  
+1. HttpClient1.1 介绍HttpClient 是Apache Jakarta Common 下的子项目，可以用来提供高效的、最新的、功能丰富的支持 HTTP 协议的客户端编程工具包，并且它支持 HTTP 协议最新的版本和建议。
+ 
 
-GET方式请求1234567891011121314151617181920//创建httpclient对象        CloseableHttpClient httpClient = HttpClients.createDefault();        //创建请求对象        HttpGet httpGet = new HttpGet(&quot;http://localhost:8080/user/shop/status&quot;);        //发送请求，接受响应结果        CloseableHttpResponse response = httpClient.execute(h ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Chen fan</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/chenfano"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/21/elasticsearch/" title="elasticsearch">elasticsearch</a><time datetime="2024-06-21T11:39:05.000Z" title="发表于 2024-06-21 19:39:05">2024-06-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/18/Docker2/" title="Docker2">Docker2</a><time datetime="2024-06-18T11:04:50.000Z" title="发表于 2024-06-18 19:04:50">2024-06-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/17/Docker/" title="Docker">Docker</a><time datetime="2024-06-17T11:18:51.000Z" title="发表于 2024-06-17 19:18:51">2024-06-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/14/Springcloud/" title="Springcloud">Springcloud</a><time datetime="2024-06-14T10:55:43.000Z" title="发表于 2024-06-14 18:55:43">2024-06-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/13/%E7%BB%8F%E9%AA%8C%E6%9D%82%E8%B0%88/" title="经验杂谈">经验杂谈</a><time datetime="2024-06-13T08:08:58.000Z" title="发表于 2024-06-13 16:08:58">2024-06-13</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/mybatis/" style="font-size: 1.1em; color: #999">mybatis</a> <a href="/tags/elasticsearch/" style="font-size: 1.1em; color: #999">elasticsearch</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 1.1em; color: #999">面试</a> <a href="/tags/%E9%9D%A2%E8%AF%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.1em; color: #999">面试 数据结构</a> <a href="/tags/%E5%AE%9A%E6%97%B6%E5%A4%84%E7%90%86%E4%BB%BB%E5%8A%A1/" style="font-size: 1.1em; color: #999">定时处理任务</a> <a href="/tags/HTML/" style="font-size: 1.1em; color: #999">HTML</a> <a href="/tags/MybatisPlus/" style="font-size: 1.1em; color: #999">MybatisPlus</a> <a href="/tags/Redis/" style="font-size: 1.1em; color: #999">Redis</a> <a href="/tags/Springcloud/" style="font-size: 1.1em; color: #999">Springcloud</a> <a href="/tags/nginx/" style="font-size: 1.1em; color: #999">nginx</a> <a href="/tags/mysql/" style="font-size: 1.3em; color: #99a1ac">mysql</a> <a href="/tags/Markdown/" style="font-size: 1.1em; color: #999">Markdown</a> <a href="/tags/java/" style="font-size: 1.3em; color: #99a1ac">java</a> <a href="/tags/Js/" style="font-size: 1.1em; color: #999">Js</a> <a href="/tags/Java/" style="font-size: 1.5em; color: #99a9bf">Java</a> <a href="/tags/JavaScript/" style="font-size: 1.1em; color: #999">JavaScript</a> <a href="/tags/API-java/" style="font-size: 1.1em; color: #999">API java</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.1em; color: #999">图床</a> <a href="/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" style="font-size: 1.1em; color: #999">文件操作</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-java/" style="font-size: 1.1em; color: #999">面向对象 java</a> <a href="/tags/docker/" style="font-size: 1.3em; color: #99a1ac">docker</a> <a href="/tags/%E9%97%B2%E6%83%85%E9%80%B8%E8%87%B4/" style="font-size: 1.1em; color: #999">闲情逸致</a> <a href="/tags/swagger/" style="font-size: 1.1em; color: #999">swagger</a> <a href="/tags/maven-java/" style="font-size: 1.1em; color: #999">maven java</a> <a href="/tags/TCP/" style="font-size: 1.1em; color: #999">TCP</a> <a href="/tags/HttpClient/" style="font-size: 1.1em; color: #999">HttpClient</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><span class="card-archive-list-count">11</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><span class="card-archive-list-count">9</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">44</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-06-21T12:30:27.075Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Chen fan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+HttpClient作用：
+
+发送HTTP请求
+接收响应数据
+
+  为什么要在Java程序中发送Http请求？有哪些应用场景呢？
+HttpClient应用场景：
+当我们在使用扫描支付、查看地图、获取验证码、查看天气等功能时
+         
+其实，应用程序本身并未实现这些功能，都是在应用程序里访问提供这些功能的服务，访问这些服务需要发送HTTP请求，并且接收响应数据，可通过HttpClient来实现。
+ 
+
+HttpClient的maven坐标：
+12345&lt;dependency&gt;	&lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;	&lt;artifactId&gt;httpclien ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/02/redis%E7%9A%84%E4%BD%BF%E7%94%A8/" title="redis的使用">redis的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-02T13:03:46.000Z" title="发表于 2024-09-02 21:03:46">2024-09-02</time></span></div><div class="content">Redis的下载Redis安装包分为windows版和Linux版：
+
+Windows版下载地址：https://github.com/microsoftarchive/redis/releases
+Linux版下载地址： https://download.redis.io/releases/
+
+windows下的使用
+Linux下的使用
+在Linux系统安装Redis步骤：
+
+将Redis安装包上传到Linux
+解压安装包，命令：tar -zxvf redis-4.0.0.tar.gz -C &#x2F;usr&#x2F;local
+安装Redis的依赖环境gcc，命令：yum install gcc-c++
+进入&#x2F;usr&#x2F;local&#x2F;redis-4.0.0，进行编译，命令：make
+进入redis的src目录进行安装，命令：make install
+
+安装后重点文件说明：
+
+&#x2F;usr&#x2F;local&#x2F;redis-4.0.0&#x2F;src&#x2F;redis-server：Redis服务启动脚本
+&#x2F;usr&#x2 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/02/%E5%85%AC%E5%85%B1%E5%AD%97%E6%AE%B5%E5%A1%AB%E5%85%85/" title="公共字段填充">公共字段填充</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-02T13:03:14.000Z" title="发表于 2024-09-02 21:03:14">2024-09-02</time></span></div><div class="content">公共字段填充步骤一自定义注解 AutoFill              
+进入到demo-server模块，创建com.demo.annotation包。
+1234567891011121314151617package com.demo.annotation;import com.demo.enumeration.OperationType;import java.lang.annotation.ElementType;import java.lang.annotation.Retention;import java.lang.annotation.RetentionPolicy;import java.lang.annotation.Target;/** * 自定义注解，用于标识某个方法需要进行功能字段自动填充处理 */@Target(ElementType.METHOD)@Retention(RetentionPolicy.RUNTIME)public @interface AutoFill &#123;    //数据库操作类型：UPDATE INSERT    Operat ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/02/threadlocal-0/" title="threadlocal">threadlocal</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-02T13:02:35.000Z" title="发表于 2024-09-02 21:02:35">2024-09-02</time></span></div><div class="content">ThreadLocal介绍：
+ThreadLocal 并不是一个Thread，而是Thread的局部变量。ThreadLocal为每个线程提供单独一份存储空间，具有线程隔离的效果，只有在线程内才能获取到对应的值，线程外则不能访问。
+常用方法：
+
+public void set(T value) 	设置当前线程的线程局部变量的值public T get() 		返回当前线程所对应的线程局部变量的值
+public void remove()        移除当前线程的线程局部变量
+
+对ThreadLocal有了一定认识后，接下来继续解决问题二
+ 
+
+初始工程中已经封装了 ThreadLocal 操作的工具类：
+在sky-common模块
+12345678910111213141516171819package com.sky.context;public class BaseContext &#123;    public static ThreadLocal&lt;Long&gt; threadLocal = new ThreadLocal&lt;&gt;();    public s ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/01/nginx%E5%92%8Cswagger/" title="nginx和swagger">nginx和swagger</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-01T07:54:21.000Z" title="发表于 2024-09-01 15:54:21">2024-09-01</time></span></div><div class="content">2.3 技术选型关于本项目的技术选型, 我们将会从 用户层、网关层、应用层、数据层 这几个方面进行介绍，主要用于展示项目中使用到的技术框架和中间件等。
+
+1). 用户层
+本项目中在构建系统管理后台的前端页面，我们会用到H5、Vue.js、ElementUI、apache echarts(展示图表)等技术。而在构建移动端应用时，我们会使用到微信小程序。
+2). 网关层
+Nginx是一个服务器，主要用来作为Http服务器，部署静态资源，访问性能高。在Nginx中还有两个比较重要的作用： 反向代理和负载均衡， 在进行项目部署时，要实现Tomcat的负载均衡，就可以通过Nginx来实现。
+3). 应用层
+SpringBoot： 快速构建Spring项目, 采用 “约定优于配置” 的思想, 简化Spring项目的配置开发。
+SpringMVC：SpringMVC是spring框架的一个模块，springmvc和spring无需通过中间整合层进行整合，可以无缝集成。
+Spring Task:  由Spring提供的定时任务框架。
+httpclient:  主要实现了对http请求的发送。
+Spri ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/07/23/synchronized/" title="synchronized">synchronized</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-07-23T12:07:59.000Z" title="发表于 2024-07-23 20:07:59">2024-07-23</time></span></div><div class="content">synchronized
+原子性：保证synchronized语句内部操作是原子的：当10个线程进入该方法，会判断是否有ACC_SYNCHRONIZED标识，然后开始竞争Monitor，同步代码，当一个线程优先拥有Monitor的owner，计数器+1，执行完退出，计数器-1，只有当0的时候才可以被其他线程获得。
+可见性：
+线程解锁前，必须把共享变量的最新值刷新到主内存中。
+线程加锁前，将工作内存中共享变量的值清空，从而使用共享变量时需要从主内存中重新读取最新的值
+volatile的可见性通过内存屏障来实现的
+靠操作系统内核的Mutex Lock（互斥锁）实现，相当于JMM中的lock、unlock
+
+
+有序性：“一个变量在同一时刻只允许一条线程对其进行lock操作”
+可重入性：可以被二次获得
+
+底层实现
+
+对象头：Mark Word（存储对象的哈希码，GC分代年龄、锁信息等）Class MetaData Address（指向对象类型数据的指针），数组长度
+实例数据：类的属性数据信息，包括父类的属性信息
+对其填充（填充数据）：字节对齐
+
+Mark Word的最低两位为标记位
+
+
+
+bi ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/07/16/talk/" title="talk">talk</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-07-16T01:45:08.000Z" title="发表于 2024-07-16 09:45:08">2024-07-16</time></span></div><div class="content">创建线程的四种方式
+继承Thread类
+
+实现Runnable接口
+run方法没有返回值，只能抛出运行时异常，无法处理
+
+实现Callable接口
+call方法有返回值，和Future和FutureTask配合获取异步执行结果
+可以抛出和获取异常
+返回执行结果需要调用FutureTask.get()得到，但会阻塞主进程
+
+线程池创建线程
+
+
+线程状态与转换New：处于等待状态的线程，还未调用start方法
+runnable：调用start方法，由新建进入可运行
+blocked：获取锁失败
+waiting：获取锁成功，但条件不满足，调用wait方法
+timed_waiting：有时限等待
+terminated：代码执行完毕
+wait和sleep方法相同点：都是让当前线程放弃使用Cpu的使用权
+不同点：sleep是Thread的静态方法，而wait是Object的成员方法，每个对象都有
+醒来时机不同：等待相应毫秒后醒来，wait可以被notify唤醒
+wait方法的调用必须先获取wait对象的锁，而sleep无此限制
+wait方法执行后会释放对象锁，允许其他线程获得
+sleep在synch ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/07/07/Ribbon/" title="Ribbon">Ribbon</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-07-07T09:14:24.000Z" title="发表于 2024-07-07 17:14:24">2024-07-07</time></span></div><div class="content">@LoadBalanced
+这是Springboot提供的
+SpringCloud底层其实是利用了一个名为Ribbon的组件，来实现负载均衡功能的。
+源码分析1）LoadBalancerInterceptor
+可以看到这里的intercept方法，拦截了用户的HttpRequest请求，然后做了几件事：
+
+request.getURI()：获取请求uri，本例中就是 http://user-service/user/8
+originalUri.getHost()：获取uri路径的主机名，其实就是服务id，user-service
+this.loadBalancer.execute()：处理服务id，和用户请求。
+
+这里的this.loadBalancer是LoadBalancerClient类型，我们继续跟入。
+2）LoadBalancerClient继续跟入execute方法：
+
+代码是这样的：
+
+getLoadBalancer(serviceId)：根据服务id获取ILoadBalancer，而ILoadBalancer会拿着服务id去eureka中获取服务列表并保存起来。
+get ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Chen fan</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">57</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/chenfano"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/02/websocket%E5%92%8Cspringtask/" title="websocket和springtask">websocket和springtask</a><time datetime="2024-09-02T13:06:13.000Z" title="发表于 2024-09-02 21:06:13">2024-09-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/02/redis%E7%9A%84%E7%BC%93%E5%AD%98/" title="redis的缓存">redis的缓存</a><time datetime="2024-09-02T13:05:26.000Z" title="发表于 2024-09-02 21:05:26">2024-09-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/02/httpclient%E7%9A%84%E4%BD%BF%E7%94%A8/" title="httpclient的使用">httpclient的使用</a><time datetime="2024-09-02T13:04:37.000Z" title="发表于 2024-09-02 21:04:37">2024-09-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/02/redis%E7%9A%84%E4%BD%BF%E7%94%A8/" title="redis的使用">redis的使用</a><time datetime="2024-09-02T13:03:46.000Z" title="发表于 2024-09-02 21:03:46">2024-09-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/02/%E5%85%AC%E5%85%B1%E5%AD%97%E6%AE%B5%E5%A1%AB%E5%85%85/" title="公共字段填充">公共字段填充</a><time datetime="2024-09-02T13:03:14.000Z" title="发表于 2024-09-02 21:03:14">2024-09-02</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/elasticsearch/" style="font-size: 1.1em; color: #999">elasticsearch</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-java/" style="font-size: 1.1em; color: #999">面向对象 java</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.1em; color: #999">图床</a> <a href="/tags/elestricsearch/" style="font-size: 1.3em; color: #99a1ac">elestricsearch</a> <a href="/tags/HttpClient/" style="font-size: 1.1em; color: #999">HttpClient</a> <a href="/tags/nginx/" style="font-size: 1.1em; color: #999">nginx</a> <a href="/tags/Redis/" style="font-size: 1.1em; color: #999">Redis</a> <a href="/tags/ribbon/" style="font-size: 1.1em; color: #999">ribbon</a> <a href="/tags/RabbitMQ/" style="font-size: 1.1em; color: #999">RabbitMQ</a> <a href="/tags/mybatis/" style="font-size: 1.1em; color: #999">mybatis</a> <a href="/tags/swagger/" style="font-size: 1.1em; color: #999">swagger</a> <a href="/tags/docker/" style="font-size: 1.3em; color: #99a1ac">docker</a> <a href="/tags/%E9%97%B2%E6%83%85%E9%80%B8%E8%87%B4/" style="font-size: 1.1em; color: #999">闲情逸致</a> <a href="/tags/HTML/" style="font-size: 1.1em; color: #999">HTML</a> <a href="/tags/%E9%9D%A2%E8%AF%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.1em; color: #999">面试 数据结构</a> <a href="/tags/Springcloud/" style="font-size: 1.1em; color: #999">Springcloud</a> <a href="/tags/Js/" style="font-size: 1.1em; color: #999">Js</a> <a href="/tags/MybatisPlus/" style="font-size: 1.1em; color: #999">MybatisPlus</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 1.1em; color: #999">面试</a> <a href="/tags/maven-java/" style="font-size: 1.1em; color: #999">maven java</a> <a href="/tags/Java/" style="font-size: 1.5em; color: #99a9bf">Java</a> <a href="/tags/%E5%AE%9A%E6%97%B6%E5%A4%84%E7%90%86%E4%BB%BB%E5%8A%A1/" style="font-size: 1.1em; color: #999">定时处理任务</a> <a href="/tags/java/" style="font-size: 1.3em; color: #99a1ac">java</a> <a href="/tags/mysql/" style="font-size: 1.3em; color: #99a1ac">mysql</a> <a href="/tags/JavaScript/" style="font-size: 1.1em; color: #999">JavaScript</a> <a href="/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" style="font-size: 1.1em; color: #999">文件操作</a> <a href="/tags/Markdown/" style="font-size: 1.1em; color: #999">Markdown</a> <a href="/tags/TCP/" style="font-size: 1.1em; color: #999">TCP</a> <a href="/tags/API-java/" style="font-size: 1.1em; color: #999">API java</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">九月 2024</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><span class="card-archive-list-count">12</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><span class="card-archive-list-count">11</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><span class="card-archive-list-count">9</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">57</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-09-02T13:07:04.526Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Chen fan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
